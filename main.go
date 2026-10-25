@@ -6,6 +6,19 @@ import (
 	"log"
 )
 
+type state struct {
+	cfg *config.Config
+}
+
+type command struct {
+	name string
+	args []string
+}
+
+func handlerLogin(s *state, cmd command) error {
+	return nil
+}
+
 func main() {
 	cfg, err := config.Read()
 	if err != nil {
